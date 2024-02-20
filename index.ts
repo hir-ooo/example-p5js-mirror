@@ -5,11 +5,11 @@ import {
 	HiroApp,
 	HiroAppOptions,
 	NumberController,
-	TextController,
+	TextController
 } from '@hiro-sdk/core';
 
-const w= 800;
-const h= 800;
+const w = 800;
+const h = 800;
 
 const app = new HiroApp({
 	title: 'P5js Ex 3',
@@ -17,7 +17,6 @@ const app = new HiroApp({
 	description: 'Some description or instructions about your artwork.',
 });
 
-app.bootstrap();
 
 const bgColor = new ColorController('#FFF', 'bg-color',{
 	label: 'BG Color'
@@ -60,10 +59,12 @@ const mouseEnabled = new BooleanController(false, 'mouse-enabled', {
 	label: 'Mouse Enabled',
 });
 
+
 let sketch = (p) => {
 
 	p.setup = () => {
 		p.createCanvas(w, h);
+		app.bootstrap();
 		p.noFill();
 		p.colorMode(p.HSB, 360, 100, 100, 1);
 		p.rectMode(p.CENTER);
@@ -116,4 +117,3 @@ let sketch = (p) => {
 };
 
 new p5(sketch);
-

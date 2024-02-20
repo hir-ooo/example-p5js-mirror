@@ -15,7 +15,7 @@
 		"util": "^0.12.5"
 	},
 	"dependencies": {
-		"@hiro-sdk/core": "latest",
+		"@hiro-sdk/core": "^1.8.0",
 		"@parcel/core": "^2.11.0",
 		"@parcel/plugin": "^2.11.0",
 		"@parcel/reporter-cli": "^2.11.0"
