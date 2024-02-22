@@ -16,7 +16,7 @@ const app = new HiroApp({
 	author: '#f57e56',
 	description: 'Some description or instructions about your artwork.',
 });
-
+app.bootstrap();
 
 const bgColor = new ColorController('#FFF', 'bg-color',{
 	label: 'BG Color'
@@ -64,7 +64,6 @@ let sketch = (p) => {
 
 	p.setup = () => {
 		p.createCanvas(w, h);
-		app.bootstrap();
 		p.noFill();
 		p.colorMode(p.HSB, 360, 100, 100, 1);
 		p.rectMode(p.CENTER);
@@ -116,4 +115,4 @@ let sketch = (p) => {
 	};
 };
 
-new p5(sketch);
+new p5(sketch, 'container');
